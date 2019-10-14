@@ -1,8 +1,8 @@
 <ul>
   <li>Home</li>
-  <li *ngIf="isLogin">Books</li>
-  <li *ngIf="isLogin" (click)="logout()">Logout</li>
-  <li *ngIf="!isLogin"><a routerLink="/login"> login</a></li>
+  <li *ngIf="this.loginService.isLogin">Books</li>
+  <li *ngIf="this.loginService.isLogin" (click)="logout()">Logout</li>
+  <li *ngIf="!this.loginService.isLogin"><a routerLink="/login"> login</a></li>
   <li *ngIf="name == 'Plow'">Truc</li>
 </ul>
 

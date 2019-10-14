@@ -1,31 +1,27 @@
 import { Component } from "@angular/core";
 
+import { LoginService } from "./services/login.service";
+
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.sass"]
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private loginService: LoginService) {}
   title = "book-Angular";
   //vérifier le http cookie
-  isLogin = false;
   name = "Plow";
 
   ngOnInit() {
     if (localStorage.getItem("token")) {
-      this.isLogin = true;
+      this.loginService.isLogin = true;
     }
   }
 
   logout() {
     console.log("logout");
-    this.isLogin = false;
+    this.loginService.isLogin = false;
     localStorage.clear();
-  }
-
-  login() {
-    console.log("login");
-    this.isLogin = true;
   }
 }
