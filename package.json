@@ -2,6 +2,7 @@
   "name": "book-angular",
   "version": "0.0.0",
   "scripts": {
+    "heroku-postbuild": "ng build --aot --target=production",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
