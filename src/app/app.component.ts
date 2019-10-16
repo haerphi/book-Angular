@@ -14,14 +14,6 @@ export class AppComponent {
   name = "Plow";
 
   ngOnInit() {
-    if (localStorage.getItem("token")) {
-      this.loginService.isLogin = true;
-    }
-  }
-
-  logout() {
-    console.log("logout");
-    this.loginService.isLogin = false;
-    localStorage.clear();
+    this.loginService.isLogin();
   }
 }

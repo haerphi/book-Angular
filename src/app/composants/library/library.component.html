@@ -1,0 +1,16 @@
+<h1>Library:</h1>
+<ul>
+  <li *ngFor="let book of this.booksservice.array">
+    <p>
+      <b>{{ book.title }}</b>
+      <i> {{ book.authors[0].name }}</i>
+    </p>
+    <a routerLink="{{ book.id }}">
+      <img
+        src="{{ book.couverture }}"
+        onerror="this.src='https://dummyimage.com/200x275/adadad/ffffff.jpg&text=Cover+not+provided';"
+        height="300"
+        width="200"
+    /></a>
+  </li>
+</ul>

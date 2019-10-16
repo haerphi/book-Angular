@@ -1,0 +1,38 @@
+<p>user works!</p>
+
+<h1>Mon Pseudo</h1>
+<p>User:{{ this.user }}</p>
+
+<h1>Mes Emprunts</h1>
+
+<div *ngFor="let emprunt of userEmprunt">
+  <ul>
+    <li>Titre: {{ emprunt.book.title }}</li>
+    <li>Date d'emprunt: {{ emprunt.date_location }}</li>
+  </ul>
+</div>
+
+<h1>Mes Critiques</h1>
+
+<div *ngFor="let avis of userCritique">
+  <!-- <p>Livre: {{}}</p> -->
+  <p>Critique:</p>
+  <ul>
+    <li>{{ avis.title }}</li>
+    <li>{{ avis.comment }}</li>
+  </ul>
+
+  <p>
+    Avis positifs: {{ avis.pertinent }}, avis négatifs: {{ avis.nonPertinent }}
+  </p>
+</div>
+
+<h1>Mes avis</h1>
+
+<div *ngFor="let critiques of userAvis">
+  <p>
+    Livre: {{ critiques.critique.book.title }} <br />
+    Critique: {{ critiques.critique.title }} <br />
+    Avis: {{ critiques.pertinent }}
+  </p>
+</div>
