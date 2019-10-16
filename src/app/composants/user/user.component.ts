@@ -12,7 +12,7 @@ import { subscribe } from "graphql";
 @Component({
   selector: "app-user",
   templateUrl: "./user.component.html",
-  styleUrls: ["./user.component.sass"]
+  styleUrls: ["./user.component.scss"]
 })
 export class UserComponent implements OnInit {
   public user: object;
