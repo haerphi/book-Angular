@@ -1,14 +1,14 @@
-<ul>
-  <li>Home</li>
-  <li *ngIf="this.loginService.login"><a routerLink="/library"> Books</a></li>
-  <li *ngIf="this.loginService.login" (click)="this.loginService.logout()">
-    <a href="#"> Logout</a>
-  </li>
-
-  <li *ngIf="!this.loginService.login"><a routerLink="/login"> login</a></li>
-  <li *ngIf="this.loginService.admin">
-    <a routerLink="/addbook"> New book</a>
-  </li>
-</ul>
-
+<div class="header">
+  <ul>
+    <li><a routerLink="/">Home</a></li>
+    <li *ngIf="this.loginService.login"><a routerLink="/library">Library</a></li>
+    <li *ngIf="this.loginService.admin">
+      <a routerLink="/addbook">Add Book</a>
+    </li>
+    <li *ngIf="this.loginService.login" (click)="this.loginService.logout()">
+      <a href="#">Sign Out</a>
+    </li>
+    <li *ngIf="!this.loginService.login"><a routerLink="/login">Sign In</a></li>
+  </ul>
+</div>
 <router-outlet></router-outlet>

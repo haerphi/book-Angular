@@ -1,0 +1,50 @@
+.header {
+  width: 100vw;
+  height: 7vh;
+  position: fixed;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.header ul {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header ul li {
+  text-decoration: none;
+  margin: 0.5rem;
+  width: 8rem;
+}
+
+.header ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+  padding: 0.1rem 1rem 0.2rem 1rem;
+}
+
+.header ul li a:hover {
+  border: 1px solid white;
+  border-radius: 5%;
+}
+/*# sourceMappingURL=app.component.css.map */
