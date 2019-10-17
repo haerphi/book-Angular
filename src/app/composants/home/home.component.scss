@@ -1,5 +1,5 @@
 .wrapper {
-  background: url("../../../assets/bg.png") no-repeat center center fixed;
+  background: url("../../../assets/bghome.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -20,13 +20,13 @@
       font-weight: 700;
       font-size: 2.5rem;
       margin: 2rem 2rem 0 2rem;
-      color: #D94A60;
+      color: rgba(217, 74, 96, 1);
     }
     h2 {
       font-weight: 700;
       font-size: 2rem;
       margin: 0 1rem 2rem 2rem;
-      color: #D94A60;
+      color: rgba(217, 74, 96, 1);
     }
   }
 }

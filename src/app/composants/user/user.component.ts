@@ -5,9 +5,6 @@ import { GetactualuserService } from "src/app/services/getactualuser.service";
 import { GetactualuseravisService } from "src/app/services/getactualuseravis.service";
 import { GetactualusercritiquesService } from "src/app/services/getactualusercritiques.service";
 import { GetactualuserempruntsService } from "src/app/services/getactualuseremprunts.service";
-import { Apollo } from "apollo-angular";
-import gql from "graphql-tag";
-import { subscribe } from "graphql";
 
 @Component({
   selector: "app-user",
@@ -48,7 +45,6 @@ export class UserComponent implements OnInit {
     // Import user emprunts
     this.actualuserempruntservice.getActualUserEmprunt().subscribe(res => {
       this.userEmprunt = res.data.actualUser.emprunts;
-      console.log(this.userEmprunt);
     });
   }
 }

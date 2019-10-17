@@ -1,1 +1,208 @@
-/* No CSS *//*# sourceMappingURL=user.component.css.map */
+.user_wrapper {
+  background: url("../../../assets/bglogin.png") no-repeat center center fixed;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.user_wrapper .content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  overflow: scroll;
+}
+
+.user_wrapper #books {
+  position: fixed;
+  width: 35rem;
+  height: auto;
+  top: 18vh;
+  left: 25vw;
+  opacity: 0.05;
+}
+
+.user_wrapper .span {
+  z-index: 100;
+  font-weight: 400;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  margin: 3rem 2rem 2rem 2rem;
+  color: white;
+  text-shadow: -1px 0 #d94a60, 0 1px #d94a60, 1.5px 0 #d94a60, 0 -1px #d94a60;
+  font-size: 2rem;
+}
+
+.user_wrapper .span .user {
+  color: #d94a60;
+  text-shadow: -1px 0 white, 0 1px white, 1.5px 0 white, 0 -1px white;
+  font-weight: 300;
+}
+
+.user_wrapper ul {
+  list-style: none;
+  margin: 0 0 1rem 0;
+  padding: 0;
+}
+
+.user_wrapper h1 {
+  color: #d94a60;
+}
+
+.user_wrapper .emprunts {
+  z-index: 100;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  margin: 0 0 0 6rem;
+}
+
+.user_wrapper .emprunts #mybooks {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(217, 74, 96, 0.1);
+  border-radius: 25px;
+  width: 19rem;
+  margin: 1rem 1rem 1rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user_wrapper .emprunts #mybooks > * {
+  margin-left: 1rem;
+}
+
+.user_wrapper .critiques {
+  z-index: 100;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  margin: 0 0 0 2rem;
+}
+
+.user_wrapper .critiques .reviews {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(217, 74, 96, 0.1);
+  border-radius: 25px;
+  width: 19rem;
+  margin: 1rem 1rem 1rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user_wrapper .avis {
+  z-index: 100;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  margin: 0 0 0 2rem;
+}
+
+.user_wrapper .avis #myavis {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(217, 74, 96, 0.1);
+  border-radius: 25px;
+  width: 19rem;
+  margin: 1rem 1rem 1rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user_wrapper .avis #myavis > * {
+  margin-left: 1rem;
+}
+
+.user_wrapper #leave {
+  position: absolute;
+  width: 9rem;
+  margin-left: -1rem;
+  height: auto;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  opacity: 0.75;
+}
+
+@media only screen and (max-width: 600px) {
+  .user_wrapper {
+    background: url("../../../assets/bguser.png") no-repeat center center fixed;
+    background-size: cover;
+  }
+  .user_wrapper .emprunts {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / 4;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+    margin: 2rem 0 0 2rem;
+  }
+  .user_wrapper .critiques {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / 4;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+    margin: 2rem 0 0 2rem;
+  }
+  .user_wrapper .avis {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / 4;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+    margin: 2rem 0 0 2rem;
+  }
+}
+/*# sourceMappingURL=user.component.css.map */

@@ -1,10 +1,16 @@
-<form>
-  <label for="email">Email</label
-  ><input #email id="email" name="email" type="text" />
-  <label for="password">password</label
-  ><input #password id="password" name="password" type="password" />
-  <button type="button" (click)="login(email.value, password.value)">
-    Submit
-  </button>
-  {{ this.error }}
-</form>
+<div class="login_wrapper">
+  <div class='content'>
+  <img id="boy" src='../../../assets/user.png'>
+  <img id="girl" src='../../../assets/user2.png'>
+  <form>
+    <label for="email"></label
+    ><input #email id="email" name="email" type="text" placeholder="E-mail" />
+    <label for="password"></label
+    ><input #password id="password" name="password" type="password" placeholder="Password" />
+    <button type="button" (click)="login(email.value, password.value)">
+      Sign In
+    </button>
+    {{ this.error }}
+  </form>
+</div>
+</div>

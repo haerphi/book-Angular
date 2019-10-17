@@ -1,14 +1,15 @@
 <div class="header">
   <ul>
-    <li><a routerLink="/">Home</a></li>
-    <li *ngIf="this.loginService.login"><a routerLink="/library">Library</a></li>
-    <li *ngIf="this.loginService.admin">
+    <li *ngIf="router.url != '/login'"><a routerLink="/">Home</a></li>
+    <li *ngIf="this.loginService.login && router.url != '/library'"><a routerLink="/library">Library</a></li>
+    <li *ngIf="this.loginService.admin && router.url === '/library'">
       <a routerLink="/addbook">Add Book</a>
     </li>
+    <li *ngIf="this.loginService.login"><a routerLink="/user">Account</a></li>
     <li *ngIf="this.loginService.login" (click)="this.loginService.logout()">
       <a href="#">Sign Out</a>
     </li>
-    <li *ngIf="!this.loginService.login"><a routerLink="/login">Sign In</a></li>
+    <li *ngIf="!this.loginService.login && router.url != '/login'"><a routerLink="/login">Sign In</a></li>
   </ul>
 </div>
 <router-outlet></router-outlet>

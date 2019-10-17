@@ -1,0 +1,152 @@
+.user_wrapper {
+  background: url("../../../assets/bglogin.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    overflow: scroll;
+  }
+
+  #books {
+    position: fixed;
+    width: 35rem;
+    height: auto;
+    top: 18vh;
+    left: 25vw;
+    opacity: 0.05;
+  }
+
+  .span {
+    z-index: 100;
+    font-weight: 400;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    margin: 3rem 2rem 2rem 2rem;
+    color: white;
+    text-shadow: -1px 0 rgba(217, 74, 96, 1), 0 1px rgba(217, 74, 96, 1),
+      1.5px 0 rgba(217, 74, 96, 1), 0 -1px rgba(217, 74, 96, 1);
+    font-size: 2rem;
+
+    .user {
+      color: rgba(217, 74, 96, 1);
+      text-shadow: -1px 0 white, 0 1px white, 1.5px 0 white, 0 -1px white;
+      font-weight: 300;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0 0 1rem 0;
+    padding: 0;
+  }
+
+  h1 {
+      color: rgba(217, 74, 96, 1);
+  }
+
+  .emprunts {
+    z-index: 100;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    margin: 0 0 0 6rem;
+
+    #mybooks {
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(217, 74, 96, 0.1);
+        border-radius: 25px;
+        width: 19rem;
+        margin: 1rem 1rem 1rem 0rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #mybooks>* {
+        margin-left: 1rem;
+    }
+    
+  }
+  .critiques {
+    z-index: 100;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    margin: 0 0 0 2rem;
+
+    .reviews {
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(217, 74, 96, 0.1);
+        border-radius: 25px;
+        width: 19rem;
+        margin: 1rem 1rem 1rem 0rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+  .avis {
+    z-index: 100;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    margin: 0 0 0 2rem;
+
+    #myavis {
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(217, 74, 96, 0.1);
+        border-radius: 25px;
+        width: 19rem;
+        margin: 1rem 1rem 1rem 0rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #myavis>* {
+        margin-left: 1rem;
+    }
+  }
+
+  #leave {
+    position: absolute;
+    width: 9rem;
+    margin-left: -1rem;
+    height: auto;
+    transform: rotate(180deg);
+    opacity: 0.75;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .user_wrapper {
+    background: url("../../../assets/bguser.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    .emprunts {
+      grid-column: 1 / 4;
+      grid-row: 2 / 3;
+      margin: 2rem 0 0 2rem;
+    }
+    .critiques {
+      grid-column: 1 / 4;
+      grid-row: 3 / 4;
+      margin: 2rem 0 0 2rem;
+    }
+    .avis {
+      grid-column: 1 / 4;
+      grid-row: 4 / 5;
+      margin: 2rem 0 0 2rem;
+    }
+  }
+}

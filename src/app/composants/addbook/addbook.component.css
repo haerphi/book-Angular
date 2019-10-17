@@ -1,1 +1,104 @@
-/* No CSS *//*# sourceMappingURL=addbook.component.css.map */
+.addbook_wrapper {
+  background: url("../../../assets/bglogin.png") no-repeat center center fixed;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.addbook_wrapper .content {
+  margin-top: 4.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.addbook_wrapper .content form {
+  z-index: 100;
+  width: 17rem;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.addbook_wrapper .content form input,
+.addbook_wrapper .content form select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #E8F0FE;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.addbook_wrapper .content form button {
+  width: 100%;
+  background-color: #d94a60;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.addbook_wrapper .content form button:hover {
+  color: #d94a60;
+  background-color: white;
+  border: 1px solid #d94a60;
+}
+
+.addbook_wrapper .content form > * {
+  width: 17rem;
+}
+
+.addbook_wrapper #girl {
+  position: absolute;
+  z-index: 100;
+  width: 6rem;
+  height: auto;
+  margin: -10.4rem 0 0 6rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .addbook_wrapper .content {
+    margin-right: 10rem;
+  }
+  .addbook_wrapper #girl {
+    margin: -10.4rem 0 0 0;
+  }
+}
+/*# sourceMappingURL=addbook.component.css.map */

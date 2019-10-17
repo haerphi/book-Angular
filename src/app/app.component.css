@@ -1,4 +1,5 @@
 .header {
+  z-index: 101;
   width: 100vw;
   height: 7vh;
   position: fixed;
@@ -31,20 +32,35 @@
 }
 
 .header ul li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   text-decoration: none;
   margin: 0.5rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
   width: 8rem;
+  height: auto;
+  text-align: center;
+  border: 1px solid rgba(217, 74, 96, 0);
 }
 
 .header ul li a {
   text-decoration: none;
-  color: white;
+  color: #d94a60;
   font-size: 1.25rem;
-  padding: 0.1rem 1rem 0.2rem 1rem;
 }
 
-.header ul li a:hover {
-  border: 1px solid white;
-  border-radius: 5%;
+.header ul li:hover {
+  border: 1px solid #d94a60;
+  border-radius: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=app.component.css.map */

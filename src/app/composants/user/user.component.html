@@ -1,38 +1,43 @@
-<p>user works!</p>
+<div class="user_wrapper">
+  <div class="content">
+    <img id="books" src="../../../assets/books.svg" />
+    <div class="span">
+      <span>Welcome </span>
+      <span class="user"
+        ><i>{{ this.user }}</i></span
+      >
+    </div>
+    <div class="emprunts">
+      <h1>My Books</h1>
+      <div id="mybooks" *ngFor="let emprunt of userEmprunt">
+        <p>
+          <b>{{ emprunt.book.title }}</b>
+          <span
+            ><i> ({{ emprunt.date_location }})</i></span
+          >
+        </p>
+      </div>
+    </div>
+    <div class="critiques">
+      <h1>My Reviews</h1>
+      <div class="reviews" *ngFor="let avis of userCritique">
+        <p>
+          <b>{{ avis.title }}</b>
+        </p>
+        <p>« {{ avis.comment }} »</p>
 
-<h1>Mon Pseudo</h1>
-<p>User:{{ this.user }}</p>
-
-<h1>Mes Emprunts</h1>
-
-<div *ngFor="let emprunt of userEmprunt">
-  <ul>
-    <li>Titre: {{ emprunt.book.title }}</li>
-    <li>Date d'emprunt: {{ emprunt.date_location }}</li>
-  </ul>
-</div>
-
-<h1>Mes Critiques</h1>
-
-<div *ngFor="let avis of userCritique">
-  <!-- <p>Livre: {{}}</p> -->
-  <p>Critique:</p>
-  <ul>
-    <li>{{ avis.title }}</li>
-    <li>{{ avis.comment }}</li>
-  </ul>
-
-  <p>
-    Avis positifs: {{ avis.pertinent }}, avis négatifs: {{ avis.nonPertinent }}
-  </p>
-</div>
-
-<h1>Mes avis</h1>
-
-<div *ngFor="let critiques of userAvis">
-  <p>
-    Livre: {{ critiques.critique.book.title }} <br />
-    Critique: {{ critiques.critique.title }} <br />
-    Avis: {{ critiques.pertinent }}
-  </p>
+        <p>👍 {{ avis.pertinent }} 👎 {{ avis.nonPertinent }}</p>
+      </div>
+    </div>
+    <div class="avis">
+      <h1>Reviews</h1>
+      <div id='myavis' *ngFor="let critiques of userAvis">
+        <p>
+          <b>{{ critiques.critique.book.title }}</b> <br /><br />
+          <i>« {{ critiques.critique.title }} »</i>
+        </p>
+      </div>
+    </div>
+    <img id="leave" src="../../../assets/leave.svg" />
+  </div>
 </div>

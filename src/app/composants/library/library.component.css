@@ -1,1 +1,125 @@
-/* No CSS *//*# sourceMappingURL=library.component.css.map */
+.lib_wrapper {
+  background: url("../../../assets/bglib.png") no-repeat center center fixed;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.lib_wrapper p {
+  position: fixed;
+  z-index: 100;
+  font-weight: 400;
+  margin: 3rem 2rem 2rem 2rem;
+  color: white;
+  text-shadow: -1px 0 #d94a60, 0 1px #d94a60, 1.5px 0 #d94a60, 0 -1px #d94a60;
+  font-size: 2rem;
+}
+
+.lib_wrapper .sub_wrapper {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  -ms-grid-columns: 1fr 3fr 1fr;
+      grid-template-columns: 1fr 3fr 1fr;
+  -ms-grid-rows: 1fr 3fr 1fr;
+      grid-template-rows: 1fr 3fr 1fr;
+  overflow: scroll;
+}
+
+.lib_wrapper .content {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.lib_wrapper .content #books {
+  position: fixed;
+  width: 35rem;
+  height: auto;
+  top: 18vh;
+  left: 25vw;
+  opacity: 0.05;
+}
+
+.lib_wrapper .content .book {
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  font-size: 0.7rem;
+  width: 300px;
+  height: auto;
+  text-align: center;
+  margin: 1rem;
+}
+
+.lib_wrapper .content .book img {
+  width: 100px;
+  height: 150px;
+}
+
+.lib_wrapper #leave {
+  position: fixed;
+  width: 9rem;
+  margin-left: -1rem;
+  height: auto;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  opacity: 0.75;
+}
+
+@media only screen and (max-width: 600px) {
+  .lib_wrapper {
+    background: url("../../../assets/bguser.png") no-repeat center center fixed;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+  }
+  .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 10rem;
+  }
+}
+/*# sourceMappingURL=library.component.css.map */

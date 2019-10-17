@@ -1,0 +1,96 @@
+.lib_wrapper {
+  background: url("../../../assets/bglib.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+
+  p {
+    position: fixed;
+    z-index: 100;
+    font-weight: 400;
+    margin: 3rem 2rem 2rem 2rem;
+    color: white;
+    text-shadow: -1px 0 rgba(217, 74, 96, 1), 0 1px rgba(217, 74, 96, 1),
+      1.5px 0 rgba(217, 74, 96, 1), 0 -1px rgba(217, 74, 96, 1);
+    font-size: 2rem;
+  }
+
+  .sub_wrapper {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    overflow: scroll;
+  }
+
+  .content {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #books {
+      position: fixed;
+      width: 35rem;
+      height: auto;
+      top: 18vh;
+      left: 25vw;
+      opacity: 0.05;
+    }
+
+    .book {
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: auto;
+      font-size: 0.7rem;
+      width: 300px;
+      height: auto;
+      text-align: center;
+      margin: 1rem;
+
+      img {
+        width: 100px;
+        height: 150px;
+      }
+    }
+  }
+
+  #leave {
+    position: fixed;
+    width: 9rem;
+    margin-left: -1rem;
+    height: auto;
+    transform: rotate(180deg);
+    opacity: 0.75;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .lib_wrapper {
+    background: url("../../../assets/bguser.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+  }
+}

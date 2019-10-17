@@ -1,31 +1,43 @@
-<form>
-  <label for="isbnOnly">ISBN</label>:
-  <input #isbnOnly type="text" id="isbnOnly" name="isbnOnly" required />
-  <label for="stockOnly">Stock</label>:
-  <input #stockOnly type="text" id="stockOnly" name="stockOnly" required />
-  <label for="formatOnly">Format</label>:
-  <input #formatOnly type="text" id="formatOnly" name="formatOnly" required />
-  <label for="langueOnly">Langue</label>:
-  <input #langueOnly type="text" id="langueOnly" name="langueOnly" required />
-  <label for="couvertureOnly">Couverture</label>:
-  <input
-    #couvertureOnly
-    type="text"
-    id="couvertureOnly"
-    name="couvertureOnly"
-  />
-  <button
-    type="button"
-    (click)="
-      newBookISBN(
-        isbnOnly.value,
-        formatOnly.value,
-        stockOnly.value,
-        langueOnly.value,
-        couvertureOnly.value
-      )
-    "
-  >
-    Submit
-  </button>
-</form>
+<div class="addbook_wrapper">
+  <div class="content">
+    <form>
+      <input #isbnOnly type="text" id="isbnOnly" name="isbnOnly" placeholder="ISBN" required />
+      <input #stockOnly type="text" id="stockOnly" name="stockOnly" placeholder="Stock" required />
+      <input
+        #formatOnly
+        type="text"
+        id="formatOnly"
+        name="formatOnly" placeholder="Format"
+        required
+      />
+      <input
+        #langueOnly
+        type="text"
+        id="langueOnly"
+        name="langueOnly"placeholder="Langue"
+        required
+      />
+      <input
+        #couvertureOnly
+        type="text"
+        id="couvertureOnly"
+        name="couvertureOnly"placeholder="Couverture"
+      />
+      <button
+        type="button"
+        (click)="
+          newBookISBN(
+            isbnOnly.value,
+            formatOnly.value,
+            stockOnly.value,
+            langueOnly.value,
+            couvertureOnly.value
+          )
+        "
+      >
+        Add Book
+      </button>
+    </form>
+  </div>
+  <img id="girl" src="../../../assets/girl.png">
+</div>
