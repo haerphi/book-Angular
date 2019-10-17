@@ -7,7 +7,7 @@ import { GetbooksService } from "../../services/getbooks.service";
   styleUrls: ["./library.component.scss"]
 })
 export class LibraryComponent {
-  constructor(private booksservice: GetbooksService) {}
+  constructor(public booksservice: GetbooksService) {}
   ngOnInit() {
     console.log(this.booksservice);
     if (this.booksservice.array.length < 1) {

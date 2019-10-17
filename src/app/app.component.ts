@@ -8,7 +8,7 @@ import { LoginService } from "./services/login.service";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-  constructor(private loginService: LoginService) {}
+  constructor(public loginService: LoginService) {}
   title = "book-Angular";
   //vérifier le http cookie
   name = "Plow";
