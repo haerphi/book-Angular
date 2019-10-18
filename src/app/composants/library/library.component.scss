@@ -60,6 +60,39 @@
       img {
         width: 100px;
         height: 150px;
+        transition: all 0.3s ease-in-out;
+        transform-origin: left center 0px;
+        transform-style: preserve-3d;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        overflow: hidden;
+      }
+
+      img:hover {
+        cursor: pointer;
+        transform: rotateY(-28deg) rotateZ(-2deg) scale(1.02);
+
+        box-shadow: 0px 0px 50px lightgrey, 3px 2px 0 grey;
+      }
+
+      img:hover::after {
+        content: " ";
+        display: block;
+        opacity: 1;
+        width: 172px;
+        height: 255px;
+        position: relative;
+        left: 8px;
+        background: linear-gradient(
+          -180deg,
+          rgba(255, 255, 255, 0.1) 0%,
+          rgba(255, 255, 255, 0) 60%
+        );
+      }
+
+      img:hover::before {
+        transform: translateY(9px);
+        opacity: 1;
       }
     }
   }

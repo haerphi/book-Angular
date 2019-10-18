@@ -1,48 +1,53 @@
-<p>
-  <b>{{ this.array[0] ? this.array[0].book.title : "" }}</b>
-  <i> {{ this.array[0].book.authors[0].name }}</i>
-</p>
-<img
-  src="{{ this.array[0].book.couverture }}"
-  onerror="this.src='https://dummyimage.com/200x275/adadad/ffffff.jpg&text=Cover+not+provided';"
-  height="300"
-  width="200"
-/>
-
-<div>
-  <p *ngIf="this.array[0].book.stock >= 5" style="color:green">
-    There is {{ this.array[0].book.stock }} left.
-  </p>
-  <p
-    *ngIf="this.array[0].book.stock > 0 && this.array[0].book.stock < 5"
-    style="color:red"
-  >
-    Only {{ this.array[0].book.stock }} left.
-  </p>
-  <p *ngIf="this.array[0].book.stock < 1" style="color:red">
-    <i>None left.</i>
-  </p>
-  <div
-    *ngIf="this.array[0].book.critiques.length > 0"
-    style="border:1px solid black;width: 15vw;padding:15px;"
-  >
-    <h2>Users reviews : {{ this.array[0].book.critiques.length }}</h2>
-    <div
-      *ngFor="let critiques of this.array[0].book.critiques"
-      style="border:1px solid black;width: auto;padding:15px;"
-    >
-      <p>
-        <b>{{ critiques.title }} </b><i>- By {{ critiques.user.name }}</i>
-      </p>
-      <div [hidden]="!this.critiques.hide">
-        <p>« {{ critiques.comment }} »</p>
-        <span>⭐️ {{ critiques.evaluation }} </span>
-        <span> 👍 {{ critiques.pertinent }} </span>
-        <span> 👎 {{ critiques.nonPertinent }}</span>
-      </div>
-      <button (click)="this.critiques.hide = !this.critiques.hide">
-        {{ this.critiques.hide == true ? "Show less" : "Show more" }}
-      </button>
+<div class="book_wrapper">
+    <div class="content">
+      <img id="books" src="../../../assets/books.svg" />
+      <p id="title">{{ this.array[0] ? this.array[0].book.title : "" }}</p>
+      <div class="left">
+      <img
+        src="{{ this.array[0].book.couverture }}"
+        onerror="this.src='https://dummyimage.com/200x275/adadad/ffffff.jpg&text=Cover+not+provided';"
+        height="300"
+        width="200"
+      />
     </div>
-  </div>
+    <div class="mid">
+        <p id="booktitle">
+          <b>{{ this.array[0] ? this.array[0].book.title : "" }}</b
+          ><br />
+          <i> {{ this.array[0].book.authors[0].name }}</i>
+        </p>
+        <div>
+          <p *ngIf="this.array[0].book.stock >= 5" style="color:green">
+            There is {{ this.array[0].book.stock }} left.
+          </p>
+          <p
+            *ngIf="this.array[0].book.stock > 0 && this.array[0].book.stock < 5"
+            style="color:red"
+          >
+            Only {{ this.array[0].book.stock }} left.
+          </p>
+          <p *ngIf="this.array[0].book.stock < 1" style="color:red">
+            <i>None left.</i>
+          </p>
+        </div>
+      </div>
+      <div class="right" *ngIf="this.array[0].book.critiques.length > 0">
+          <h2>Users reviews ({{ this.array[0].book.critiques.length }})</h2>
+          <div *ngFor="let critiques of this.array[0].book.critiques">
+            <p>
+              <b>{{ critiques.title }} </b><i>- By {{ critiques.user.name }}</i>
+            </p>
+            <div [hidden]="!this.critiques.hide">
+              <p>« {{ critiques.comment }} »</p>
+              <span>⭐️ {{ critiques.evaluation }} </span>
+              <span> 👍 {{ critiques.pertinent }} </span>
+              <span> 👎 {{ critiques.nonPertinent }}</span>
+            </div>
+            <button (click)="this.critiques.hide = !this.critiques.hide">
+              {{ this.critiques.hide == true ? "Show less" : "Show more" }}
+            </button>
+          </div>
+        </div>
+    </div>
+  <img id="leave" src="../../../assets/leave.svg" />
 </div>

@@ -1,0 +1,102 @@
+.book_wrapper {
+  background: url("../../../assets/bglib.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    overflow: scroll;
+  }
+
+  #title {
+    max-width: 20rem;
+    position: fixed;
+    z-index: 100;
+    font-weight: 400;
+    margin: 3rem 2rem 2rem 2rem;
+    color: white;
+    text-shadow: -1px 0 rgba(217, 74, 96, 1), 0 1px rgba(217, 74, 96, 1),
+      1.5px 0 rgba(217, 74, 96, 1), 0 -1px rgba(217, 74, 96, 1);
+    font-size: 2rem;
+  }
+
+  #books {
+    position: fixed;
+    width: 35rem;
+    height: auto;
+    top: 18vh;
+    left: 25vw;
+    opacity: 0.05;
+  }
+
+  #booktitle {
+    margin: 0;
+  }
+
+  h2 {
+    margin: -5px 0 0 0;
+  }
+
+  .left {
+    width: 15rem;
+    z-index: 100;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    margin: 0 0 0 6rem;
+  }
+  .mid {
+    width: 15rem;
+    z-index: 100;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    margin: 0;
+  }
+  .right {
+    width: 15rem;
+    z-index: 100;
+    grid-column: 3 / 4;
+    grid-row: 2 / 100;
+    margin: 0;
+  }
+
+  #leave {
+    position: absolute;
+    width: 9rem;
+    margin-left: -1rem;
+    height: auto;
+    transform: rotate(180deg);
+    opacity: 0.75;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .book_wrapper {
+    background: url("../../../assets/bguser.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    .left {
+      grid-column: 1 / 4;
+      grid-row: 2 / 3;
+      margin: 10rem 0 0 2rem;
+    }
+    .mid {
+      grid-column: 1 / 4;
+      grid-row: 3 / 4;
+      margin: 2rem 0 0 2rem;
+    }
+    .right {
+      grid-column: 1 / 4;
+      grid-row: 4 / 5;
+      margin: 2rem 0 0 2rem;
+    }
+  }
+}
